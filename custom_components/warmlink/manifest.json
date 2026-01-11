@@ -1,0 +1,12 @@
+{
+  "domain": "warmlink",
+  "name": "Warmlink",
+  "version": "0.1.0",
+  "config_flow": true,
+  "icon": "mdi:heat-pump",
+  "documentation": "https://github.com/",
+  "requirements": [],
+  "dependencies": [],
+  "codeowners": [],
+  "iot_class": "cloud_polling"
+}

@@ -1,0 +1,20 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Warmlink",
+        "description": "Enter your Warmlink cloud credentials.",
+        "data": {
+          "username": "Username",
+          "password": "Password",
+          "base": "Base URL",
+          "lang": "Language",
+          "login_source": "Login source",
+          "area_code": "Area code",
+          "app_id": "App ID",
+          "type": "Type"
+        }
+      }
+    }
+  }
+}
