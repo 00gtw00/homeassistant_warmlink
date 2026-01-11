@@ -8,18 +8,20 @@ from homeassistant.core import HomeAssistant
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, UpdateFailed
 
 from .api import WarmlinkApi
-from .const import DEFAULT_CODES, DOMAIN
+from .const import DEFAULT_CODES, DEFAULT_UPDATE_INTERVAL, DOMAIN
 
 _LOGGER = logging.getLogger(__name__)
 
 
 class WarmlinkCoordinator(DataUpdateCoordinator[dict[str, Any]]):
-    def __init__(self, hass: HomeAssistant, api: WarmlinkApi) -> None:
+    def __init__(
+        self, hass: HomeAssistant, api: WarmlinkApi, update_interval: int = DEFAULT_UPDATE_INTERVAL
+    ) -> None:
         super().__init__(
             hass,
             _LOGGER,
             name=DOMAIN,
-            update_interval=timedelta(seconds=30),
+            update_interval=timedelta(seconds=update_interval),
         )
         self.api = api
 

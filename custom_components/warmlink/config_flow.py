@@ -12,12 +12,14 @@ from .const import (
     CONF_LANG,
     CONF_LOGIN_SOURCE,
     CONF_TYPE,
+    CONF_UPDATE_INTERVAL,
     DEFAULT_APP_ID,
     DEFAULT_AREA_CODE,
     DEFAULT_BASE,
     DEFAULT_LANG,
     DEFAULT_LOGIN_SOURCE,
     DEFAULT_TYPE,
+    DEFAULT_UPDATE_INTERVAL,
     DOMAIN,
 )
 
@@ -39,6 +41,7 @@ class WarmlinkConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                 vol.Optional(CONF_AREA_CODE, default=DEFAULT_AREA_CODE): str,
                 vol.Optional(CONF_APP_ID, default=DEFAULT_APP_ID): str,
                 vol.Optional(CONF_TYPE, default=DEFAULT_TYPE): str,
+                vol.Optional(CONF_UPDATE_INTERVAL, default=DEFAULT_UPDATE_INTERVAL): int,
             }
         )
         return self.async_show_form(step_id="user", data_schema=schema)

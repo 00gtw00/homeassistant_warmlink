@@ -56,7 +56,7 @@ class WarmlinkClimate(CoordinatorEntity[WarmlinkCoordinator], ClimateEntity):
 
     @property
     def current_temperature(self) -> float | None:
-        value = self._device_values.get("T02")
+        value = self._device_values.get("T01")
         try:
             return float(value)
         except (TypeError, ValueError):

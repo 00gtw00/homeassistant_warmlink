@@ -13,8 +13,10 @@ CONF_LOGIN_SOURCE = "login_source"
 CONF_AREA_CODE = "area_code"
 CONF_APP_ID = "app_id"
 CONF_TYPE = "type"
+CONF_UPDATE_INTERVAL = "update_interval"
 
 API_TIMEOUT = 15
+DEFAULT_UPDATE_INTERVAL = 30
 
 DEFAULT_CODES = [
     "Power",

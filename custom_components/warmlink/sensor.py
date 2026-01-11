@@ -18,8 +18,8 @@ class WarmlinkSensorDescription(SensorEntityDescription):
 
 SENSORS: list[WarmlinkSensorDescription] = [
     WarmlinkSensorDescription(key="outside", name="Outside", code="T04", native_unit_of_measurement=UnitOfTemperature.CELSIUS),
-    WarmlinkSensorDescription(key="inlet", name="Inlet", code="T01", native_unit_of_measurement=UnitOfTemperature.CELSIUS),
-    WarmlinkSensorDescription(key="outlet", name="Outlet", code="T02", native_unit_of_measurement=UnitOfTemperature.CELSIUS),
+    WarmlinkSensorDescription(key="inlet", name="Inlet", code="T02", native_unit_of_measurement=UnitOfTemperature.CELSIUS),
+    WarmlinkSensorDescription(key="outlet", name="Outlet", code="T01", native_unit_of_measurement=UnitOfTemperature.CELSIUS),
     WarmlinkSensorDescription(
         key="flow",
         name="Flow",
